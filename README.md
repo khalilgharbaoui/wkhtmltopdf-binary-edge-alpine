@@ -15,7 +15,7 @@ gem 'wkhtmltopdf-binary-edge', '~> 0.12.5.0'
 
 ### Supported OS
 
-* Linux (Ubuntu Trusty)	64-bit
-* OS X 10.7+            64-bit
+* Linux (Ubuntu Trusty, Alpine)	64-bit
+* OS X 10.7+                    64-bit
 
 ### Recommended for development & testing only.
