@@ -2,14 +2,18 @@
 
 arch = case RUBY_PLATFORM
   when /64.*linux/
-    'linux-amd64'
+    RUBY_PLATFORM.match?(/linux-musl/) ? 'alpine-linux-amd64' : 'linux-amd64'
   when /darwin/
     'darwin-x86_64'
   else
-    raise "Invalid platform. Must be running linux or intel-based Mac OS."
+    raise 'Invalid platform. Must be running Linux, Alpine Linux or Intel-based Mac OS.'
 end
 
 args = $*.map { |x| x.include?(' ') ? "'" + x + "'" : x }
 cmd = File.expand_path "#{File.dirname(__FILE__)}/../libexec/wkhtmltopdf-#{arch}"
 
-exec "#{cmd} #{args.join(' ')}"
+begin
+  exec "#{cmd} #{args.join(' ')}"
+rescue Errno::ENOENT => e
+  raise "Not found or wkhtmltopdf binaries might be incompatible with the os version \n #{e}"
+end
