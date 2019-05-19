@@ -1,9 +1,9 @@
 # wkhtmltopdf-binary-edge-alpine
 
 ### Supported OS
-* Alpine Linux 3.9+     64-bit
-* Linux (Ubuntu)	      64-bit
-* OS X 10.7+            64-bit
+* Alpine Linux 3.9+       64-bit
+* Linux (Ubuntu Trusty+)	64-bit
+* OS X 10.7+              64-bit
 ###
 
 ### Don't need *Alpine Linux* support? use [this gem](https://github.com/pallymore/wkhtmltopdf-binary-edge) instead!
