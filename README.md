@@ -6,7 +6,7 @@
 * OS X 10.7+              64-bit
 ###
 
-### Don't need *Alpine Linux* support? use [this gem](https://github.com/pallymore/wkhtmltopdf-binary-edge) instead!
+### Don't need *Alpine Linux* support? please use [this gem](https://github.com/pallymore/wkhtmltopdf-binary-edge) instead!
 ### If you are using wkhtmltopdf on heroku, please use [this gem](https://github.com/rposborne/wkhtmltopdf-heroku) instead!
 
 ## Installation
@@ -14,7 +14,7 @@ In your `Gemfile`:
 ```ruby
 gem 'wkhtmltopdf-binary-edge-alpine', '~> 0.12.5.0', github: 'khalilgharbaoui/wkhtmltopdf-binary-edge-alpine'
 ```
-### Dependencies for Alpine Linux Docker 
+### Docker dependencies for Alpine Linux 
 Add this layer in your `Dockerfile`:
 ```bash
 # Install dependencies for wkhtmltopdf
@@ -43,3 +43,13 @@ RUN apk add --update --no-cache --wait 10 \
 && rm -rf /tmp/* \
 && apk del .build-deps
 ```
+
+## Contribute
+
+Please feel free to open a issue or pull request with suggestions.
+
+## Credits
+
+Based upon the following repos:
+- https://github.com/pallymore/wkhtmltopdf-binary-edge
+- https://github.com/Surnet/docker-wkhtmltopdf
