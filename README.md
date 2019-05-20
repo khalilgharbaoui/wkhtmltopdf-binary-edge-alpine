@@ -42,18 +42,17 @@ RUN apk add --update --no-cache --wait 10 \
 && rm -rf /tmp/* \
 && apk del .build-deps
 ```
-### Current version:
-
-#### wkhtmltopdf 0.12.5 For Ubuntu & Mac OS
-[release notes](https://github.com/wkhtmltopdf/wkhtmltopdf/releases/tag/0.12.5)
-
-#### wkhtmltopdf0.12.5 with qt patches For Alpine Linux
+### Current wkhtmltopdf version:
+#### 0.12.5 For Ubuntu & Mac OS
+#### 0.12.5 with qt patches For Alpine Linux
 Extracted from `surnet/alpine-wkhtmltopdf:3.9-0.12.5-small` docker image:
 ```bash
 docker run --rm --entrypoint cat \
 surnet/alpine-wkhtmltopdf:3.9-0.12.5-small \
 /bin/wkhtmltopdf > ./libexec/wkhtmltopdf-alpine-linux-amd64
 ```
+
+See: [wkhtmltopdf release notes](https://github.com/wkhtmltopdf/wkhtmltopdf/releases/tag/0.12.5)
 
 ## Contribute
 
