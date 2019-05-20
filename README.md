@@ -11,7 +11,7 @@
 ## Installation
 In your `Gemfile`:
 ```ruby
-gem 'wkhtmltopdf-binary-edge-alpine', '~> 0.12.5.0', github: 'khalilgharbaoui/wkhtmltopdf-binary-edge-alpine'
+gem 'wkhtmltopdf-binary-edge-alpine', '~> 0.12.5.0'
 ```
 ### Docker dependencies for Alpine Linux 
 Add this layer in your `Dockerfile`:
