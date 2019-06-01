@@ -28,3 +28,5 @@ build/
 
 # Mac OSX Junk
 .DS_Store
+
+*.OLD
