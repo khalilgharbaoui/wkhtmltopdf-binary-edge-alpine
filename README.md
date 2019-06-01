@@ -51,8 +51,16 @@ docker run --rm --entrypoint cat \
 surnet/alpine-wkhtmltopdf:3.9-0.12.5-small \
 /bin/wkhtmltopdf > ./libexec/wkhtmltopdf-alpine-linux-amd64
 ```
-
 See: [wkhtmltopdf release notes](https://github.com/wkhtmltopdf/wkhtmltopdf/releases/tag/0.12.5)
+
+### Known Issues:
+Image is shrunk due to a zoom bug in the wkhtmltopdf binary version 0.12.5.0 when on Alpine Linux.
+
+Workaround is to set the `zoom:` to exacly `1.3`.
+
+See: https://github.com/wkhtmltopdf/wkhtmltopdf/issues/4036
+
+And also see: https://github.com/wkhtmltopdf/wkhtmltopdf/issues/4036#issuecomment-493812493
 
 ## Contribute
 
