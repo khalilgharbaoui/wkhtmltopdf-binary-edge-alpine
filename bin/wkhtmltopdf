@@ -9,11 +9,10 @@ arch = case RUBY_PLATFORM
     raise 'Invalid platform. Must be running Linux, Alpine Linux or Intel-based Mac OS.'
 end
 
-args = $*.map { |x| x.include?(' ') ? "'" + x + "'" : x }
 cmd = File.expand_path "#{File.dirname(__FILE__)}/../libexec/wkhtmltopdf-#{arch}"
 
 begin
-  exec "#{cmd} #{args.join(' ')}"
+  exec cmd, *ARGV
 rescue Errno::ENOENT => e
   raise "Not found or wkhtmltopdf binaries might be incompatible with the os version \n #{e}"
 end
