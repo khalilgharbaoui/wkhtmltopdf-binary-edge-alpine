@@ -66,6 +66,16 @@ surnet/alpine-wkhtmltopdf:3.15.0-0.12.6-small \
 
 See: [wkhtmltopdf release notes](https://github.com/wkhtmltopdf/wkhtmltopdf/releases/tag/0.12.6)
 
+### Known Issues:
+
+Image is shrunk due to a zoom bug in the wkhtmltopdf binary version 0.12.5.0 when on Alpine Linux.
+
+Workaround is to set the `zoom:` to exacly `1.3`.
+
+See: https://github.com/wkhtmltopdf/wkhtmltopdf/issues/4036
+
+And also see: https://github.com/wkhtmltopdf/wkhtmltopdf/issues/4036#issuecomment-493812493
+
 ## Contribute
 
 Please feel free to open a issue or pull request with suggestions.
