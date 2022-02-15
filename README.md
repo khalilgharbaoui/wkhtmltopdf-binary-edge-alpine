@@ -1,20 +1,27 @@
 # wkhtmltopdf-binary-edge-alpine
 
-### Don't need *Alpine Linux* support? please use [this gem](https://github.com/pallymore/wkhtmltopdf-binary-edge) instead!
+### Don't need _Alpine Linux_ support? please use [this gem](https://github.com/pallymore/wkhtmltopdf-binary-edge) instead!
+
 ### If you are using wkhtmltopdf on heroku, please use [this gem](https://github.com/rposborne/wkhtmltopdf-heroku) instead!
 
 ### Supported OS
-* Alpine Linux 3.9+       64-bit
-* Linux (Ubuntu Trusty+)	64-bit
-* OS X 10.7+              64-bit
+
+- Alpine Linux 3.15+ 64-bit
+- Linux (Ubuntu Trusty+) 64-bit
+- OS X 10.7+ 64-bit
 
 ## Installation
+
 In your `Gemfile`:
+
 ```ruby
-gem 'wkhtmltopdf-binary-edge-alpine', '~> 0.12.5.0', github: 'khalilgharbaoui/wkhtmltopdf-binary-edge-alpine'
+gem 'wkhtmltopdf-binary-edge-alpine', '~> 0.12.6.0', github: 'khalilgharbaoui/wkhtmltopdf-binary-edge-alpine'
 ```
-### Docker dependencies for Alpine Linux 
+
+### Docker dependencies for Alpine Linux
+
 Add this layer in your `Dockerfile`:
+
 ```bash
 # Install dependencies for wkhtmltopdf
 RUN apk add --update --no-cache --wait 10 \
@@ -42,17 +49,22 @@ RUN apk add --update --no-cache --wait 10 \
 && rm -rf /tmp/* \
 && apk del .build-deps
 ```
+
 ### Current wkhtmltopdf version:
-#### 0.12.5 For Ubuntu & Mac OS
-#### 0.12.5 with qt patches For Alpine Linux
-Extracted from `surnet/alpine-wkhtmltopdf:3.9-0.12.5-small` docker image:
+
+#### 0.12.6 For Ubuntu & Mac OS
+
+#### 0.12.6 with qt patches For Alpine Linux
+
+Extracted from `surnet/alpine-wkhtmltopdf:3.15.0-0.12.6-small` docker image:
+
 ```bash
 docker run --rm --entrypoint cat \
-surnet/alpine-wkhtmltopdf:3.9-0.12.5-small \
+surnet/alpine-wkhtmltopdf:3.15.0-0.12.6-small \
 /bin/wkhtmltopdf > ./libexec/wkhtmltopdf-alpine-linux-amd64
 ```
 
-See: [wkhtmltopdf release notes](https://github.com/wkhtmltopdf/wkhtmltopdf/releases/tag/0.12.5)
+See: [wkhtmltopdf release notes](https://github.com/wkhtmltopdf/wkhtmltopdf/releases/tag/0.12.6)
 
 ## Contribute
 
@@ -61,6 +73,7 @@ Please feel free to open a issue or pull request with suggestions.
 ## Credits
 
 Based upon the following repos:
+
 - https://github.com/pallymore/wkhtmltopdf-binary-edge
 - https://github.com/Surnet/docker-wkhtmltopdf
 - https://github.com/aantonw/docker-alpine-wkhtmltopdf-patched-qt
