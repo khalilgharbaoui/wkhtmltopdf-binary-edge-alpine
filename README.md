@@ -37,17 +37,14 @@ RUN apk add --update --no-cache --wait 10 \
   ttf-droid \
   ttf-freefont \
   ttf-liberation \
-  ttf-ubuntu-font-family
-&& apk add --update --no-cache --virtual .build-deps \
-  msttcorefonts-installer \
-\
+  apk add --update --no-cache --virtual .build-deps \
+  msttcorefonts-installer && \
+
 # Install microsoft fonts
-&& update-ms-fonts \
-&& fc-cache -f \
-\
+  update-ms-fonts && fc-cache -f && \
+
 # Clean up when done
-&& rm -rf /tmp/* \
-&& apk del .build-deps
+  rm -rf /tmp/* && apk del .build-deps
 ```
 
 ### Current wkhtmltopdf version:
