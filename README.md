@@ -36,7 +36,7 @@ RUN apk add --update --no-cache --wait 10 \
   ttf-dejavu \
   ttf-droid \
   ttf-freefont \
-  ttf-liberation \
+  ttf-liberation && \
   apk add --update --no-cache --virtual .build-deps \
   msttcorefonts-installer && \
 
